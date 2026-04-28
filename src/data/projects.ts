@@ -26,10 +26,10 @@ export const projects: Project[] = [
     year: '2026',
     tags: ['Unreal', 'C++', 'Gameplay', 'UI', 'Blueprints'],
     media: [
-      { kind: 'image', src: './Assets/Media/CookingSystem/img_CookingSystemWidget_Empty.png', alt: 'Cooking System Widget' },
+      { kind: 'image', src: '/Assets/Media/CookingSystem/img_CookingSystemWidget_Empty.png', alt: 'Cooking System Widget' },
         {
             kind: 'video',
-            src: './Assets/Media/CookingSystem/video_CookingSystemWidget.mp4',
+            src: '/Assets/Media/CookingSystem/video_CookingSystemWidget.mp4',
             alt: 'Cooking System Widget in action',
         },
     ],
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     year: '2025',
     tags: ['Unreal', 'C++', 'Gameplay', 'UI', 'Blueprints'],
     media: [
-      { kind: 'image', src: './Assets/Media/Inventory/img_InventoryWidget.png', alt: 'Inventory Widget' },
+      { kind: 'image', src: '/Assets/Media/Inventory/img_InventoryWidget.png', alt: 'Inventory Widget' },
       {
         kind: 'gif',
         src: 'https://picsum.photos/seed/nebula-anim/1280/720',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     year: '2026',
     tags: ['Unreal', 'C++', 'Blender', 'Substance Painter', 'HLSL', 'Material Graph'],
     media: [
-      { kind: 'image', src: './Assets/Media/Detectors/Radar/img_RadarDetectorBlenderBlankBG.png', alt: 'Radar Detector Blender' },
+      { kind: 'image', src: '/Assets/Media/Detectors/Radar/img_RadarDetectorBlenderBlankBG.png', alt: 'Radar Detector Blender' },
       { kind: 'image', src: 'https://picsum.photos/seed/forge-2/1280/720', alt: 'Validation report' },
     ],
     links: [{ label: 'Write-up', href: '#' }],
