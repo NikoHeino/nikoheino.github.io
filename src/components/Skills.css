@@ -1,0 +1,112 @@
+.skills {
+  background:
+    radial-gradient(800px 400px at 50% 0%, rgba(79, 209, 255, 0.05), transparent 60%);
+}
+
+.skills__head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 720px) {
+  .skills__head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills__card {
+  position: relative;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--bg-2) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  overflow: hidden;
+}
+
+.skills__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(400px 200px at var(--mx, 50%) var(--my, 0%), rgba(79, 209, 255, 0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  pointer-events: none;
+}
+
+.skills__card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.skills__card:hover::before {
+  opacity: 1;
+}
+
+.skills__card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.skills__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.skills__card:nth-child(2) .skills__dot { background: var(--accent-2); box-shadow: 0 0 16px var(--accent-2-glow); }
+.skills__card:nth-child(3) .skills__dot { background: var(--accent-3); box-shadow: 0 0 16px rgba(183, 148, 255, 0.4); }
+.skills__card:nth-child(4) .skills__dot { background: #4ade80; box-shadow: 0 0 16px rgba(74, 222, 128, 0.4); }
+
+.skills__card-title {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--display);
+  letter-spacing: -0.01em;
+}
+
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills__chip {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.skills__chip:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.06);
+}
